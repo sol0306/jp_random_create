@@ -104,3 +104,28 @@ body {
       font-size: 1.6rem; /* 데스크톱에서 단어 표시 폰트 크기 조절 */
   }
 }
+
+/* ... (기존 스타일 코드) ... */
+
+/* 애니메이션 정의 */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%); /* 시작: 화면 왼쪽 밖 */
+    opacity: 0; /* 시작: 투명 */
+  }
+  100% {
+    transform: translateX(0); /* 끝: 원래 위치 */
+    opacity: 1; /* 끝: 불투명 */
+  }
+}
+
+/* 단어 표시 영역에 적용될 애니메이션 클래스 */
+.word-animation {
+  animation: slideInFromLeft 0.5s ease-out forwards; /* 0.5초 동안 왼쪽에서 슬라이드, 애니메이션 끝 상태 유지 */
+}
+
+/* 애니메이션 충돌 방지를 위한 준비 (opacity 기본값) */
+#word-display p span {
+    opacity: 1; /* 기본적으로 보이도록 설정 */
+    display: inline-block; /* transform 적용을 위해 필요 */
+}
