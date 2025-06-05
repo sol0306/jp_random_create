@@ -7,5 +7,5 @@ async function getWord(category) {
   document.getElementById('jp').textContent = word.jp;
   document.getElementById('pron').textContent = word.pronunciation;
   document.getElementById('kr').textContent = word.kr;
-
+  document.getElementById('dict').textContent = word.definition;
 }
