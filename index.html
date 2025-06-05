@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>일본어 단어 랜덤 생성기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>일본어 단어 랜덤 생성기</h1>
+
+  <div class="button-container">
+    <button onclick="getWord('nouns')">명사</button>
+    <button onclick="getWord('verbs')">동사</button>
+    <button onclick="getWord('adjectives_i')">い형용사</button>
+    <button onclick="getWord('adjectives_na')">な형용사</button>
+  </div>
+
+  <div id="word-display">
+    <p><strong>일본어 :</strong> <span id="jp"></span></p>
+    <p><strong>발음 :</strong> <span id="pron"></span></p>
+    <p><strong>한국어 :</strong> <span id="kr"></span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
